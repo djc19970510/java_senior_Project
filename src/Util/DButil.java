@@ -19,7 +19,7 @@ import java.sql.Statement;
             String driverClassName = "com.mysql.jdbc.Driver";
             String url = "jdbc:mysql://127.0.0.1:3306/test";
             String user = "root";
-            String password = "123456";
+            String password = "19970510ding@";
             Connection conn = null;
             try {
                 Class.forName(driverClassName);
