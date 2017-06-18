@@ -13,13 +13,16 @@ import java.sql.Statement;
      * 数据库工具类
      */
     public class DButil {
+        private static final String DATABASE_IP="jdbc:mysql://101.200.44.38:3306/test";
+        private static final String DATABASE_USER="root";
+        private static final String DATABASE_PASSWD="19970510ding@";
 
         // 获取数据库连接
         public static Connection getConnection() {
             String driverClassName = "com.mysql.jdbc.Driver";
-            String url = "jdbc:mysql://127.0.0.1:3306/test";
-            String user = "root";
-            String password = "19970510ding@";
+            String url = DATABASE_IP;
+            String user = DATABASE_USER;
+            String password = DATABASE_PASSWD;
             Connection conn = null;
             try {
                 Class.forName(driverClassName);

@@ -12,21 +12,20 @@ public class test {
         String sql = "select * from message where id>?";
         Connection conn = DButil.getConnection();
         int i=0;
-//        try{
-//            while(true) {
-//                PreparedStatement pst = conn.prepareStatement(sql);
-//                pst.setInt(1,i);
-//                ResultSet rs = pst.executeQuery();
-//                while (rs.next()) {
-//                    i = rs.getInt(1);
-//                    System.out.println(rs.getString(2));
-//                    System.out.println(rs.getInt(3));
-//                }
-//                rs.close();
-//                pst.close();
-//            }
-//        }catch (SQLException e){
-//            e.printStackTrace();
-//        }
+        try{
+            while(true) {
+                PreparedStatement pst = conn.prepareStatement(sql);
+                pst.setInt(1,i);
+                ResultSet rs = pst.executeQuery();
+                while (rs.next()) {
+                    i = rs.getInt(1);
+                    System.out.println(rs.getString(2));
+                }
+                rs.close();
+                pst.close();
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 }
